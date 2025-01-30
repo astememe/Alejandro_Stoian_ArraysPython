@@ -28,7 +28,6 @@ if machine_coins.count(0) < 2 and machine_coins[0] != 0:
         machine_coins[types_coins.index(money) - 1]+=1
         money_sum += money
     print(f"El cambio es: {calcularCambio(money_sum, machine_coins, types_coins, price_prod, choice)}")
-
 else:
     while money_sum != price_prod[choice - 1]:
         money = float(input("Introduzca importe exacto"))
