@@ -1,6 +1,7 @@
 name_prod = ["Agua", "Refresco", "Zumo"]
+num_prod = [1, 2, 3]
 price_prod = [0.50, 0.75, 0.95]
-machine_coins = [20, 20, 0, 0, 20, 20]
+machine_coins = [20, 20, 20, 20, 20, 20]
 types_coins = [0.05, 0.1, 0.2, 0.5, 1, 2]
 
 def menu(name_prod, price_prod):
@@ -18,6 +19,8 @@ def calcularCambio(money_sum, machine_coins, type_coins, price_prod, choice):
 
 menu(name_prod, price_prod)
 choice = int(input("ELIJA PRODUCTO"))
+while choice not in num_prod:
+    choice = int(input("LA OPCIÓN NO EXISTE"))
 money = 0
 money_sum = 0
 
